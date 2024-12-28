@@ -1,0 +1,1 @@
+int length = sizeof(myNum) / sizeof(myNum[0]);
