@@ -26,10 +26,40 @@ int main()
 
     // get and save
     scanf("%d %c", &userNum, &userChar);
+    // & is the memory address like pointer
+    //!!!!!!!!!!!!!
+    //&userNum is also often been call a "pointer".
+    // A pointer basically stores the memory address of a variable as its value.
+    // to print pointer value, we use the %p format specifier.
+    //!!!!!!!!!!!!!
 
     // printf out
     printf("Your number is : %d \n", userNum);
     printf("Your char is : %c \n", userChar);
+    //================================================================
+    // string input
+    char yourName[30];
+
+    // ask
+    printf("Enter your name here: \n");
+
+    // get and save
+    scanf("%s", yourName);
+
+    // output
+    printf("Hello Master %s \n", yourName);
+    //================================================================
+    // function that get multiple words
+    char fullName[30];
+
+    // ask
+    printf("Type fullName here: \n");
+
+    // get and saving
+    fgets(fullName, sizeof(fullName), stdin); // fgets fill get the full of multiple word
+
+    // print out
+    printf("Hi this is full name %s", fullName);
 
     return 0;
 }
