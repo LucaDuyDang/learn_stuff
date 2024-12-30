@@ -11,11 +11,19 @@ void ptrPrintf()
     printf("Luca Create a Pointer\n");
 }
 
+void calculateNumber()
+{
+    int a = 10;
+    int b = 20;
+    int c = a + b;
+    printf("\nThe result of a + b = %d\n", c);
+}
+
 int main()
 {
     // calling function
-    funcCall();
-    ptrPrintf();
+    funcCall();  // a function can be call mutiple time
+    ptrPrintf(); // function also can be calculate the Number
 
     // create a int for I loop
     int i;
@@ -46,5 +54,6 @@ int main()
         printf("%c", nameTag[j]);
     }
 
+    calculateNumber();
     return 0;
 }
