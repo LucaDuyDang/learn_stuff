@@ -6,6 +6,8 @@ int main()
     int *ptr = &myAge;
     printf("%d", myAge);  // output 43
     printf("%p", &myAge); // output the memory address of myAge(0x7ffe5367e044)
-    printf("%p", ptr);
+    printf("%p", ptr);    // output the same above
+    printf("%d", *ptr);   // output also 43, value pointer
+
     return 0;
 }

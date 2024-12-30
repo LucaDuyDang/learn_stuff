@@ -1,1 +1,3 @@
-"terminal.integrated.shellArgs.linux": ["--enable-ansi"],
+{
+    "saveOnTabChange": true
+}
