@@ -1,1 +1,1 @@
-calculateNumber();
+int x = 50;
