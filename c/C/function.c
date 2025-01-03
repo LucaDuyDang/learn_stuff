@@ -22,12 +22,12 @@ void paramFuncTwo(char name[], int age) // void three
 // void is a function without return value and no parameter
 void funcCall() // void four
 {
-    printf("Luca Create a Function\n");
+    printf("Create a Function\n");
 }
 
 void ptrPrintf() // void five
 {
-    printf("Luca Create a Pointer\n");
+    printf("Create a Pointer\n");
 }
 
 void calculateNumber() // void six
@@ -36,6 +36,20 @@ void calculateNumber() // void six
     int b = 20;
     int c = a + b;
     printf("\nThe result of a + b = %d\n", c);
+}
+
+void callNumbers(int myNum[15]) // void seven
+{
+    for (int i = 0; i < 10; i++)
+    {
+        printf("\n %d \n", myNum[i]);
+    }
+}
+
+// we use int or float for return a value
+int returnValue(int n, int m)
+{
+    return n + m;
 }
 
 int main()
@@ -51,7 +65,7 @@ int main()
     // create a int for (i) loop
     int i;
 
-    // create Array of int
+    // create int Array
     int myNumbers[20] = {
         1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
 
@@ -59,11 +73,11 @@ int main()
     char nameTag[20] = "Dev LucaDang";
 
     // create Lenght of Array
-    int lenght = sizeof(myNumbers) / sizeof(myNumbers[0]);
-    int lenghtC = sizeof(nameTag) / sizeof(nameTag[0]);
+    int length = sizeof(myNumbers) / sizeof(myNumbers[0]);
+    int lengthC = sizeof(nameTag) / sizeof(nameTag[0]);
 
     // loop create printf int
-    for (size_t i = 0; i < lenght; i++)
+    for (size_t i = 0; i < length; i++)
     {
         // printf all the number in the array
         printf("%d\n", myNumbers[i]);
@@ -71,7 +85,7 @@ int main()
 
     // loop create printf char with j inside for
 
-    for (int j = 0; j < lenghtC; j++)
+    for (int j = 0; j < lengthC; j++)
     {
         // printf all the char in the array
         printf("%c", nameTag[j]);
@@ -116,5 +130,27 @@ int main()
         }
     }
 
+    // Pass function array parameters
+    int myNum[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    callNumbers(myNum); // function call array int parameter
+
+    // return value function
+
+    printf("\n Return is : %d \n", returnValue(30, 66));
+
+    // return value in array result
+    int resultArr[5];
+
+    // call the array function with a different value
+    resultArr[0] = returnValue(30, 20);
+    resultArr[1] = returnValue(30, 12);
+    resultArr[2] = returnValue(30, 11);
+    resultArr[3] = returnValue(20, 11);
+    resultArr[4] = returnValue(12, 11);
+
+    for (int b = 0; b < 5; b++)
+    {
+        printf(" \n ResultArray%d is : %d \n", b + 1, resultArr[b]);
+    }
     return 0;
 }
