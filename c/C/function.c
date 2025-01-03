@@ -1,5 +1,11 @@
 #include <stdio.h>
 
+/*
+ * Function consist of two parts
+ * 1. Function Declaration
+ * 2. Function Definition
+ */
+
 // void with parameter
 void paramFuncOne(char name[]) // void one
 {
