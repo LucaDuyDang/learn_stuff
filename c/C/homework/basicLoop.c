@@ -2,7 +2,7 @@
 
 int findLarge()
 {
-    return
+    return 0;
 }
 
 int main()

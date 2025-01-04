@@ -75,10 +75,10 @@ int main()
     int myNumbers[20] = {
         1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
 
-    // create Array char
+    // create char Array
     char nameTag[20] = "Dev LucaDang";
 
-    // create Lenght of Array
+    // create array length
     int length = sizeof(myNumbers) / sizeof(myNumbers[0]);
     int lengthC = sizeof(nameTag) / sizeof(nameTag[0]);
 
@@ -90,7 +90,6 @@ int main()
     }
 
     // loop create printf char with j inside for
-
     for (int j = 0; j < lengthC; j++)
     {
         // printf all the char in the array
@@ -111,7 +110,6 @@ int main()
     paramFuncTwo("Perfect Girl", 18);
 
     // test function with loop / 2d loop
-
     for (int a = 0; a <= 2; a++)
     {
         for (int b = 0; b <= 2; b++) // 2d loop
