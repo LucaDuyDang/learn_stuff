@@ -1,34 +1,64 @@
+// Basic Array Manipulation
 #include <stdio.h>
 
-int nuGlobal;   // khai báo biến số nguyên duyệt toàn cục , nên sử dụng trong hàm main để cố định truy cập
-int n[3];       // array số nguyên bao gồm 3 phần tử
-void findArr(); // sử dụng function tạo vòng lặp duyệt qua các giá trị
-
+// global integer
+int i, biggestNumber, smallestNumber, sum, avarage;
+int arrayNumber[3];
+int length = sizeof(arrayNumber) / sizeof(arrayNumber[0]);
+// function
+void scanArray();
+void findArrBiggest();
+void findArrSmallest();
+void numberSum();
+void sumAverage();
+// specify
 int main()
 {
-    printf("input 3 numbers\n");                            // yêu cầu input
-    scanf("%d", &n[0]);                                     // input array
-    findArr();                                              // gọi function
-    printf("The large number in array is %d \n", nuGlobal); // trả kết quả
+    printf("Input 10 numbers\n");
+    scanArray();
+    findArrBiggest();
+    printf("Biggest Number : %d \n", biggestNumber);
+    // printf("Smallest Number : %d \n", smallestNumber);
+    printf("Total Sum : %d \n", sum);
+    // printf("Average : %d \n", sumAverage());
 }
 
-void findArr()
+void scanArray()
 {
-    int length = sizeof(n) / sizeof(n[0]); // lấy độ dài array
-
-    for (int i = 1; i < length; i++)
+    for (i = 1; i < length; i++) // i = 1 để bắt đầu từ 1 đến 10 elements
     {
-        scanf("%d", &n[i]); // scan array
-        if (n[i] > n[i - 1])
-        // ở đây n[i] chính là n[0] giá trị đầu tiên của mãng
-        // nếu n lớn hơn n -1 thì lấy giá trị n cho nuGlobal
+        scanf(" %d ", &arrayNumber[i]);
+    }
+}
+
+void findArrBiggest()
+{
+    biggestNumber = arrayNumber[0];
+    for (i = 1; i < length; i++)
+    {
+        if (arrayNumber[i] > biggestNumber)
         {
-            nuGlobal = n[i];
+            biggestNumber = arrayNumber[i];
         }
-        // nếu ngược lại thì thay đổi giá trị n - 1 cho nuGlobal
-        else
-        {
-            nuGlobal = n[i - 1];
-        }
+    }
+}
+
+// void findArrSmallest()
+// {
+//     smallestNumber = arrayNumber[1];
+//     for (i = 1; i < length; i++)
+//     {
+//         if (arrayNumber[i] < smallestNumber)
+//         {
+//             smallestNumber = arrayNumber[i];
+//         }
+//     }
+// }
+
+void numberSum()
+{
+    for (i = 0; i < length; i++)
+    {
+        sum += arrayNumber[i];
     }
 }
