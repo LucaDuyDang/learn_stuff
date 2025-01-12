@@ -62,15 +62,22 @@ public class ComplexJavaExample {
     }
 }
 
-// Explanation:
-// Functions:
-// calculateSum(): This function loops through the array and adds all the elements together to get the sum.
-// calculateAverage(): This function uses calculateSum() to get the sum of the array and then divides it by the number of elements to get the average.
-// findMaximum(): This function loops through the array to find the maximum value.
-// User Input:
-// The program first asks the user how many numbers they want to input and creates an array of that size.
-// The user is then prompted to input the numbers, which are stored in the array.
-// Output:
-// The program outputs the sum, average, and maximum value of the numbers the user entered.
-// Typecasting:
-// In the average calculation, typecasting is used to ensure the division results in a floating-point number (double).
+/* 
+*Explanation:
+
+    *Functions:
+*calculateSum(): This function loops through the array and adds all the elements together to get the sum.
+*calculateAverage(): This function uses calculateSum() to get the sum of the array and then divides it by the number of elements to get the average.
+*findMaximum(): This function loops through the array to find the maximum value.
+
+    *User Input:
+*The program first asks the user how many numbers they want to input and creates an array of that size.
+*The user is then prompted to input the numbers, which are stored in the array.
+
+    *Output:
+*The program outputs the sum, average, and maximum value of the numbers the user entered.
+
+    *Typecasting:
+*In the average calculation, typecasting is used to ensure the division results in a floating-point number (double).
+
+*/
