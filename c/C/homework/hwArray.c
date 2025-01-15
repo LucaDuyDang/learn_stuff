@@ -1,64 +1,46 @@
-// Basic Array Manipulation
 #include <stdio.h>
 
-// global integer
-int i, biggestNumber, smallestNumber, sum, avarage;
-int arrayNumber[3];
-int length = sizeof(arrayNumber) / sizeof(arrayNumber[0]);
-// function
-void scanArray();
-void findArrBiggest();
-void findArrSmallest();
-void numberSum();
-void sumAverage();
-// specify
-int main()
+void function(int array[], int i, int size, int *min, int *max, int *sum, float *average)
 {
-    printf("Input 10 numbers\n");
-    scanArray();
-    findArrBiggest();
-    printf("Biggest Number : %d \n", biggestNumber);
-    // printf("Smallest Number : %d \n", smallestNumber);
-    printf("Total Sum : %d \n", sum);
-    // printf("Average : %d \n", sumAverage());
-}
+    *sum = 0;
+    *min = array[0];
+    *max = array[0];
 
-void scanArray()
-{
-    for (i = 1; i < length; i++) // i = 1 để bắt đầu từ 1 đến 10 elements
+    for (i = 1; i < size; i++)
     {
-        scanf(" %d ", &arrayNumber[i]);
-    }
-}
-
-void findArrBiggest()
-{
-    biggestNumber = arrayNumber[0];
-    for (i = 1; i < length; i++)
-    {
-        if (arrayNumber[i] > biggestNumber)
+        if (array[i] > *max)
         {
-            biggestNumber = arrayNumber[i];
+            *max = array[i];
+        }
+        if (array[i] < *min)
+        {
+            *min = array[i];
         }
     }
+
+    // loop sum thought array on each element
+    for (i = 0; i < size; i++)
+    {
+        *sum = *sum + array[i]; // shortcut : *sum += array[i]
+    }
+    *average = (float)*sum / size;
 }
 
-// void findArrSmallest()
-// {
-//     smallestNumber = arrayNumber[1];
-//     for (i = 1; i < length; i++)
-//     {
-//         if (arrayNumber[i] < smallestNumber)
-//         {
-//             smallestNumber = arrayNumber[i];
-//         }
-//     }
-// }
-
-void numberSum()
+int main()
 {
-    for (i = 0; i < length; i++)
+    int array[10];
+    int i, sum, min, max;
+    float average;
+    int size = sizeof(array) / sizeof(array[0]);
+    printf("Input\n");
+    for (i = 0; i < size; i++)
     {
-        sum += arrayNumber[i];
+        scanf("%d", &array[i]);
     }
+    function(array, i, size, &min, &max, &sum, &average);
+
+    printf("Min %d\n", min);
+    printf("Max %d \n", max);
+    printf("Sum %d\n", sum);
+    printf("Avarage %2.f\n", average);
 }
