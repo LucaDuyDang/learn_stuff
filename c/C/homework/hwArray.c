@@ -43,4 +43,7 @@ int main()
     printf("Max %d \n", max);
     printf("Sum %d\n", sum);
     printf("Avarage %2.f\n", average);
+    return 0;
 }
+
+// Done
