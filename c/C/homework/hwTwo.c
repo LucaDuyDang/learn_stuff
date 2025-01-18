@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int array[10];
+int array[3];
 int size, i, min, max, secondMin, secondMax;
 
 void function(int array[], int i, int size, int *min, int *max, int *secondMin, int *secondMax)
@@ -37,7 +37,7 @@ int main()
 
     function(array, i, size, &min, &max, &secondMin, &secondMax);
 
-    printf("Min %d\n ", min);
+    printf("Min %d\n", min);
     printf("Max %d\n", max);
     printf("Second Min %d \n", secondMin);
     printf("Second Max %d \n", secondMax);
