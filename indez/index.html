@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+
+        .in{
+            color: rgb(0, 118, 0);
+        }
+
+        /* Tạo thuộc tính chung của 2 nút */
+        .one,.two{
+            border-radius: 30px;
+            margin-left: 5px; /* bên ngoài là margin bên trong là padding */
+            margin-right: 5px;
+            padding: 7px; /* left top right bottom */
+        }
+        
+        /* Thuộc tính nút một */
+        .one{
+            background-color: rgb(255, 216, 20);
+            border: none; /* không border */
+            box-shadow: 1px 1px 5px ; /* tạo shadow texture */
+            width: 130px;
+        }
+
+        /* Thuộc tính nút hai */
+        .two{
+            background-color: rgb(255, 164, 28);
+            border: none;
+            box-shadow: 1px 1px 5px ;
+            width: 130px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="amazon">
+        <a href="https://www.amazon.com">Back to Amazon</a>
+    </div>
+
+    <h1>Nike Black Running Shoes</h1>
+
+    <div class="instock">
+        <b class="in">$39 - instock.</b>
+    </div>
+
+    <div class="para">
+      <p class="paragraph">Free delivery tomorow</p>  
+    </div>
+
+    <div class="button">
+        <button class="one">Add to Cart</button>
+        <button class="two">Buy now</button>
+    </div>
+
+</body>
+</html>

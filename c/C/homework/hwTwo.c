@@ -25,7 +25,7 @@ void function(int array[], int i, int size, int *min, int *max, int *secondMin, 
             *min = array[i];
             // if (*min == array[i])
             // {
-            //     *secondMin = *min[array[3] - 1];
+            //     *secondMin = *min[array[3] - 1];x
             // }
         }
     }
