@@ -15,15 +15,24 @@ void function(int array[], int i, int size, int *min, int *max, int *secondMin, 
         if (array[i] > *max)
         {
             *max = array[i];
+            // if (*max == array[i])
+            // {
+            //     *secondMax = *max[array[3] - 1];
+            // }
         }
         if (array[i] < *min)
         {
             *min = array[i];
+            // if (*min == array[i])
+            // {
+            //     *secondMin = *min[array[3] - 1];
+            // }
         }
     }
-    *secondMax = *max - 1;
-    *secondMin = *min - 1;
 }
+// *secondMax = *max - 1;
+// *secondMin = *min - 1;
+
 int main()
 {
 
