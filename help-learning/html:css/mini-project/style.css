@@ -1,0 +1,59 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #1a237e, #0d47a1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+  }
+  
+  /* Container for Text */
+  .container {
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+  }
+  
+  .goodnight-message h1 {
+    font-size: 4rem;
+    color: #fbc02d;
+    text-shadow: 0px 0px 20px rgba(255, 223, 0, 0.8), 0px 0px 30px rgba(255, 215, 0, 0.6);
+    animation: glow 2s infinite alternate;
+  }
+  
+  .goodnight-message p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: #bbdefb;
+  }
+  
+  /* Keyframe for Glowing Text */
+  @keyframes glow {
+    0% {
+      text-shadow: 0 0 10px #fbc02d, 0 0 20px #ffeb3b, 0 0 30px #fdd835;
+    }
+    100% {
+      text-shadow: 0 0 20px #fff176, 0 0 40px #fff59d, 0 0 60px #ffcc80;
+    }
+  }
+  
+  /* Fullscreen Snowfall Effect */
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  

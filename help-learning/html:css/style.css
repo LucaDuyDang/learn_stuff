@@ -1,0 +1,112 @@
+.alink{
+    color: rgb(0, 113, 133);
+}
+
+.in{
+    color: rgb(0, 118, 0);
+}
+
+/* Tạo thuộc tính chung của 2 nút */
+.one,.two{
+    border-radius: 30px;
+    margin-left: 5px; /* bên ngoài là margin bên trong là padding */
+    margin-right: 5px;
+    padding: 7px; /* left top right bottom */
+    font: bold;
+    border: none;
+    cursor: pointer; 
+   transition: 0.3s;
+}
+
+/* Thuộc tính nút một */
+.one{
+    background-color: rgb(255, 216, 20);
+    box-shadow: 1px 1px 5px ; /* tạo shadow texture */
+    width: 100px;
+}
+
+.one:hover{
+    background-color: rgb(255, 17, 0);
+    color: white;
+    padding: 10px;
+    box-shadow: 3px 3px 5px;
+    transition: 0.5s;
+}
+
+.one:active{
+    background-color: rgba(60, 0, 255, 0.533);
+    color: white;
+    padding: 13px;
+    width: 120px;
+    transition: 0.1s;
+}
+
+.two:active{
+    background-color: rgba(116, 74, 244, 0.533) ;
+    color: white;
+    padding: 15px;
+    width: 150px;
+    transition: 0.1s;
+}
+/* Thuộc tính nút hai */
+.two{
+    background-color: rgb(255, 164, 28);
+    box-shadow: 1px 1px 5px 1px;
+    width: 130px;
+}
+
+.two:hover{
+    background-color: rgb(32, 55, 229);
+    color: white;
+    padding: 10px;
+    box-shadow: 3px 3px 5px;
+}
+
+p{
+    display: inline-block;
+}
+
+h1{
+    display: inline-block;
+}
+.button{
+    display: inline-block;
+}
+
+.test{
+    display: inline-block;
+    margin: 18px;
+}
+
+.username,.pass{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.login-user{
+    max-width: 200px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.enter{
+    background-color: blue;
+    color: white;
+    font: bold;
+    transition: 0.5s;
+}
+
+.enter:hover{
+    background-color: navy;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+.enter:active{
+    background-color: red;
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+

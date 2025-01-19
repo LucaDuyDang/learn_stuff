@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hatran&display=swap" rel="stylesheet">
+    <title>UI-Login</title>
+    
+    <style>
+        body{
+            background-color: rgb(219, 218, 218);
+            text-align: center;
+            font-family: Noto, Arial, Helvetica, sans-serif;
+        }
+
+        p{
+            display: inline-block;
+        }
+        
+        .main{
+            flex: 10px;
+            border: 1px solid black;
+            border-radius: 20px;
+            padding: 120px;
+        }
+
+        .checkbox{
+            margin-right: 3px;
+        }
+        
+        .remember,.forgot{
+            color: rgb(130, 126, 126);
+        }
+
+        .remember{
+            margin-right: 100px;
+        }
+
+        .forgot,.ask,.paragraph{
+            cursor: pointer;
+        }
+        .user,.password{
+            width: 200px;
+            border-radius: 30px;
+            border: none;
+            padding: 12px 60px;
+            margin: 5px 10px;
+        }
+
+        .enter{
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            width: 280px;
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            transition: 0.5s;
+            box-shadow: 3px 3px 5px;
+        }
+
+        .enter:hover{
+            background-color: rgb(68, 68, 68);
+            cursor: pointer;
+            padding: 15px 50px;
+        }
+
+        .enter:active{
+            background-color: rgb(130, 126, 126);
+            cursor: pointer;
+            padding: 19px 57px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+
+        <h2>Login</h2>
+
+        <div class="ui">
+            <input class="user" type="text" placeholder="Email"><br>
+            <input class="password" type="password" placeholder="Password">    
+        </div>
+  
+            <div class="flexbox">
+                <input class="checkbox" type="checkbox">
+                <p class="remember">Remember Me</p>
+                <p class="forgot">Forgot password</p>
+            </div><br>
+           
+            <button class="enter"> Sign In</button>
+            <br>
+
+            <p class="ask"> Don't have a account? <b class="paragraph">Sign Up</b></p>
+
+
+    </div>
+
+
+</body>
+</html>
