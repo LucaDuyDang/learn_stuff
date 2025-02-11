@@ -4,3 +4,4 @@ var con_zin = false
 ten = window.promt("Insert")
 ten = "i luv " + ten
 document.write(ten)
+

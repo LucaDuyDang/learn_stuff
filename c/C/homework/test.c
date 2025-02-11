@@ -40,7 +40,7 @@ void findSecondMax(int array[], int size, int *max, int *secondMax)
 
 int main()
 {
-    int array[5]; // All elements are the same
+    int array[5];
     int size = sizeof(array) / sizeof(array[0]);
     int min, max, secondMin, secondMax;
 
