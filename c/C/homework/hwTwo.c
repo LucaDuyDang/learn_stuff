@@ -52,5 +52,3 @@ int main()
     printf("Second Max %d \n", secondMax);
     return 0;
 }
-
-// Done
