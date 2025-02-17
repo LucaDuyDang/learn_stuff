@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/html/project/numberOne/style/style.css">
+    <title>Container-Main</title>
+</head>
+<body>
+
+        <div class="theme-toggle">
+            <button id="theme-btn">🌙 Dark Mode</button>
+        </div>
+    
+        <div class="login-container">
+            <div class="login-box">
+                <h2>Welcome Back</h2>
+                <p>Please sign in to continue</p>
+    
+                <form id="loginForm">
+                    <div class="input-group">
+                        <input type="text" id="username" placeholder="Username" required>
+                        <small class="error-message"></small>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="password" placeholder="Password" required>
+                        <span class="toggle-password" onclick="togglePassword()">👁️</span>
+                        <small class="error-message"></small>
+                    </div>
+                    <button type="submit">Login</button>
+                    <div class="links">
+                        <a href="#">Forgot Password?</a>
+                        <a href="#">Create Account</a>
+                    </div>
+                </form>
+    
+                <p id="status-message"></p>
+            </div>
+        </div>
+        <script src="/html/project/numberOne/script/script.js"></script>
+    
+</body>
+</html>
