@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: grey;
+        }
+
+        .header{
+            display: flex;
+        }
+        .leftSection,.middlePart,.rightSection{
+            border: 3px solid lightblue;
+        }
+
+        .leftSection{
+            flex : 1;
+        }
+
+        .middlePart{
+            width: 300px;
+        }
+
+        .rightSection{
+            flex: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="leftSection">Flex 1</div>
+        <div class="middlePart">300px</div>
+        <div class="rightSection">Flex 2</div>
+        
+    </div>
+    
+</body>
+</html>
