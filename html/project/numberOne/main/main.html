@@ -4,40 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/html/project/numberOne/style/style.css">
-    <title>Container-Main</title>
+    <!-- <script defer src="/html/project/numberOne/script/script.js"></script> -->
+    <title>Container-Main-One</title>
 </head>
 <body>
 
         <div class="theme-toggle">
-            <button id="theme-btn">🌙 Dark Mode</button>
+            <button id="theme-btn">🌙</button>
         </div>
     
         <div class="login-container">
             <div class="login-box">
                 <h2>Welcome Back</h2>
-                <p>Please sign in to continue</p>
     
                 <form id="loginForm">
                     <div class="input-group">
-                        <input type="text" id="username" placeholder="Username" required>
-                        <small class="error-message"></small>
+                        <input type="text" id="username" required>
+                        <label for="username">Username</label>
                     </div>
                     <div class="input-group">
-                        <input type="password" id="password" placeholder="Password" required>
+                        <input type="password" id="password" required oninput="checkStrength()">
+                        <label for="password">Password</label>
                         <span class="toggle-password" onclick="togglePassword()">👁️</span>
-                        <small class="error-message"></small>
                     </div>
-                    <button type="submit">Login</button>
-                    <div class="links">
-                        <a href="#">Forgot Password?</a>
-                        <a href="#">Create Account</a>
-                    </div>
+                    <div id="password-strength"></div>
+                    <button type="submit" class="neon-button">Login</button>
                 </form>
     
                 <p id="status-message"></p>
             </div>
         </div>
+
         <script src="/html/project/numberOne/script/script.js"></script>
-    
 </body>
 </html>

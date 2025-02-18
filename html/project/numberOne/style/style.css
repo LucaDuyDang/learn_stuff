@@ -1,15 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    transition: 0.3s ease-in-out;
+    font-family: 'Orbitron', sans-serif;
 }
 
 body {
-    background: url('background.jpg') no-repeat center center/cover;
+    background: #0a0a0a;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,85 +16,88 @@ body {
 }
 
 .login-container {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    animation: fadeIn 0.6s ease-in-out;
-}
-
-.login-box {
-    width: 320px;
-    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
     text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
 }
 
 h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    color: #0ff;
+    text-shadow: 0 0 10px #0ff;
 }
 
 .input-group {
     position: relative;
-    margin-bottom: 15px;
+    margin-top: 20px;
 }
 
 input {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-button {
-    width: 100%;
-    padding: 10px;
-    background: #007bff;
-    color: #fff;
+    padding: 12px;
     border: none;
-    cursor: pointer;
-    font-size: 16px;
     border-radius: 5px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
 }
 
-button:hover {
-    background: #0056b3;
+input:focus {
+    outline: none;
+    border-bottom: 2px solid #0ff;
+}
+
+label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    color: #ddd;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+input:focus + label,
+input:valid + label {
+    top: 5px;
+    font-size: 12px;
+    color: #0ff;
+}
+
+.neon-button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background: #0ff;
+    color: #0a0a0a;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #0ff;
+    transition: all 0.3s;
+}
+
+.neon-button:hover {
+    box-shadow: 0 0 20px #0ff;
     transform: scale(1.05);
-}
-
-.links {
-    margin-top: 10px;
-}
-
-.links a {
-    text-decoration: none;
-    color: #007bff;
 }
 
 .theme-toggle {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 15px;
+    right: 15px;
 }
 
 #theme-btn {
-    padding: 8px 12px;
-    cursor: pointer;
+    background: transparent;
     border: none;
-    border-radius: 5px;
-    background: #007bff;
-    color: white;
-}
-
-.dark-mode {
-    background: #222;
-    color: white;
-}
-
-.dark-mode .login-container {
-    background: rgba(0, 0, 0, 0.7);
+    font-size: 24px;
+    cursor: pointer;
+    color: #0ff;
 }
 
 @keyframes fadeIn {

@@ -1,59 +1,50 @@
-// Theme Toggle
 document.getElementById("theme-btn").addEventListener("click", function() {
     document.body.classList.toggle("dark-mode");
-    let mode = document.body.classList.contains("dark-mode") ? "Dark" : "Light";
-    this.innerText = mode === "Dark" ? "☀️ Light Mode" : "🌙 Dark Mode";
-    localStorage.setItem("theme", mode);
+    this.innerText = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
 });
 
-// Load theme from Local Storage
-if (localStorage.getItem("theme") === "Dark") {
-    document.body.classList.add("dark-mode");
-    document.getElementById("theme-btn").innerText = "☀️ Light Mode";
-}
-
-// Toggle Password Visibility
 function togglePassword() {
     let passwordField = document.getElementById("password");
     passwordField.type = passwordField.type === "password" ? "text" : "password";
 }
 
-// Form Validation & AJAX Submission
+function checkStrength() {
+    let password = document.getElementById("password").value;
+    let strengthText = document.getElementById("password-strength");
+    
+    if (password.length === 0) {
+        strengthText.innerText = "";
+        return;
+    }
+
+    if (password.length < 6) {
+        strengthText.innerText = "Weak Password";
+        strengthText.style.color = "red";
+    } else if (password.length < 10) {
+        strengthText.innerText = "Medium Strength";
+        strengthText.style.color = "orange";
+    } else {
+        strengthText.innerText = "Strong Password";
+        strengthText.style.color = "green";
+    }
+}
+
 document.getElementById("loginForm").addEventListener("submit", function(event) {
     event.preventDefault();
-
-    let username = document.getElementById("username");
-    let password = document.getElementById("password");
-    let errorMessages = document.querySelectorAll(".error-message");
-
-    // Clear previous errors
-    errorMessages.forEach(error => error.innerText = "");
-
-    let isValid = true;
-
-    if (username.value.trim() === "") {
-        username.nextElementSibling.innerText = "Username is required";
-        isValid = false;
-    }
-
-    if (password.value.trim().length < 6) {
-        password.nextElementSibling.innerText = "Password must be at least 6 characters";
-        isValid = false;
-    }
-
-    if (!isValid) return;
-
-    // Simulated AJAX Request
+    
+    let username = document.getElementById("username").value.trim();
+    let password = document.getElementById("password").value.trim();
     let statusMessage = document.getElementById("status-message");
+
     statusMessage.innerText = "Logging in...";
     statusMessage.style.color = "blue";
 
     setTimeout(() => {
-        if (username.value === "admin" && password.value === "123456") {
+        if (username === "admin" && password === "securepass") {
             statusMessage.innerText = "Login Successful!";
             statusMessage.style.color = "green";
         } else {
-            statusMessage.innerText = "Invalid Username or Password!";
+            statusMessage.innerText = "Invalid Credentials!";
             statusMessage.style.color = "red";
         }
     }, 1500);

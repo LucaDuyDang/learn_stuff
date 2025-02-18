@@ -1,0 +1,128 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    transition: all 0.3s ease-in-out;
+}
+
+.light-mode {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+/* App Container */
+#app-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Login Card */
+.login-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.dark-mode .login-card {
+    background-color: #333;
+    color: #fff;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Form Inputs */
+.input-container {
+    margin-bottom: 15px;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.input-container input:focus {
+    border-color: #0066cc;
+    outline: none;
+}
+
+/* Submit Button (3D Effect) */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #0066cc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px #005bb5;
+    transition: all 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #005bb5;
+}
+
+.submit-btn:active {
+    box-shadow: 0 2px #005bb5;
+    transform: translateY(2px);
+}
+
+/* Mode Switch Button */
+.mode-switcher {
+    margin-top: 20px;
+}
+
+#mode-toggle {
+    background-color: #ddd;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+#mode-toggle:hover {
+    background-color: #ccc;
+}
+
+/* 3D Effect on Button */
+.submit-btn, #mode-toggle {
+    transform: translateY(0);
+    transition: transform 0.2s ease-in-out;
+}
+
+.submit-btn:active, #mode-toggle:active {
+    transform: translateY(2px);
+}
