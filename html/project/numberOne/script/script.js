@@ -1,6 +1,6 @@
 document.getElementById("theme-btn").addEventListener("click", function() {
-    document.body.classList.toggle("dark-mode");
-    this.innerText = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+    document.body.classList.toggle("light-mode");
+    this.innerText = document.body.classList.contains("light-mode") ?  "🌙" :"☀️";
 });
 
 function togglePassword() {
@@ -21,7 +21,7 @@ function checkStrength() {
         strengthText.innerText = "Weak Password";
         strengthText.style.color = "red";
     } else if (password.length < 10) {
-        strengthText.innerText = "Medium Strength";
+        strengthText.innerText = "Medium Password";
         strengthText.style.color = "orange";
     } else {
         strengthText.innerText = "Strong Password";
@@ -37,10 +37,14 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     let statusMessage = document.getElementById("status-message");
 
     statusMessage.innerText = "Logging in...";
-    statusMessage.style.color = "blue";
+    statusMessage.style.color = "green ";
 
     setTimeout(() => {
-        if (username === "admin" && password === "securepass") {
+        if (username === "chiadmin" && password === "Linhchi1206!") {
+            statusMessage.innerText = "Em Be login vao roi!";
+            statusMessage.style.color = "lightblue";
+        }
+        else if (username === "duyadmin" && password === "securepass") {
             statusMessage.innerText = "Login Successful!";
             statusMessage.style.color = "green";
         } else {
