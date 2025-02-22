@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number-Two</title>
+    <!-- <link rel="stylesheet" href="/html/project/numberTwo/style.css"> -->
+
+    <style>
+
+            /* General Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Body and Container */
+    body {
+        font-family: 'Arial', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f0f0f0;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Dark and Light Mode */
+    .light-mode {
+        background-color: #fff;
+        color: #333;
+    }
+
+    .dark-mode {
+        background-color: #121212;
+        color: #f5f5f5;
+    }
+
+    /* Login Card */
+    .login-card {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        width: 300px;
+        text-align: center;
+    }
+
+    .dark-mode .login-card {
+        background-color: #333;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Input Containers */
+    .input-container {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .input-container input {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 2px solid #ccc;
+        outline: none;
+        transition: all 0.3s ease;
+    }
+
+    .input-container input:focus {
+        border-color: #007bff;
+    }
+
+    .input-container label {
+        position: absolute;
+        top: 10px;
+        left: 12px;
+        font-size: 16px;
+        color: #aaa;
+        transition: all 0.3s ease;
+    }
+
+    /* Floating Label Effect */
+    .input-container input:focus + label,
+    .input-container input:not(:placeholder-shown) + label {
+        top: -10px;
+        left: 5px;
+        font-size: 12px;
+        color: #007bff;
+    }
+
+    /* Submit Button (3D Effect) */
+    .submit-btn {
+        width: 100%;
+        padding: 15px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .submit-btn:hover {
+        background-color: #0056b3;
+    }
+
+    .submit-btn:active {
+        transform: translateY(4px);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Mode Toggle Button */
+    .mode-toggle-btn {
+        margin-top: 10px;
+        background-color: #ddd;
+        border: none;
+        padding: 10px 20px;
+        font-size: 14px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .mode-toggle-btn:hover {
+        background-color: #bbb;
+    }
+
+    .mode-toggle-btn:active {
+        transform: translateY(2px);
+    }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Login Card -->
+        <div class="login-card">
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="input-container">
+                    <input type="text" id="username" name="username" required>
+                    <label for="username">Username</label>
+                </div>
+                <div class="input-container">
+                    <input type="password" id="password" name="password" required>
+                    <label for="password">Password</label>
+                </div>
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+            <button id="mode-toggle" class="mode-toggle-btn">Switch Mode</button>
+        </div>
+    </div>
+
+    <script>
+
+    // Toggle between light and dark modes
+    const modeToggleButton = document.getElementById('mode-toggle');
+    const body = document.body;
+    const loginCard = document.querySelector('.login-card');
+
+    // Add event listener to the mode toggle button
+    modeToggleButton.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        loginCard.classList.toggle('dark-mode');
+    });
+
+    // Form submission logic (optional)
+    const form = document.getElementById('login-form');
+    form.addEventListener('submit',(event) => {
+        event.preventDefault();
+
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        if (username && password) {
+            alert(`Logged in as ${username}`);
+        } else {
+            alert('Please fill in both fields');
+        }
+    });
+
+
+    </script>
+</body>
+</html>
