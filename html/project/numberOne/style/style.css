@@ -32,6 +32,10 @@ body{
     width: 120px;
 }
 
+.leftSection{
+    vertical-align: middle;
+}
+
 .leftSection, .middle , .rightSection{
     border: 4px solid green;
 }
@@ -43,10 +47,11 @@ body{
 .multiTab{
     border: 3px solid lightblue;
     display: flex;
+    justify-content: space-between;
 }
 
 .multiTab a{
-    margin: 0px 190px 0px 90px;
+    padding: 20px;
 }
 
 .login-container {
