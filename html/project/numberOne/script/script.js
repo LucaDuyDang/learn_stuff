@@ -1,4 +1,3 @@
-import 'boxicons'
 document.getElementById("theme-btn").addEventListener("click", function() {
     document.body.classList.toggle("light-mode");
     this.innerText = document.body.classList.contains("light-mode") ?  "🌙" :"☀️";
