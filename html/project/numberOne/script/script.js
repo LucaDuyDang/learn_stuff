@@ -44,6 +44,18 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
             statusMessage.innerText = "Em Be login vao roi!";
             statusMessage.style.color = "lightblue";
         }
+        if (username === "accountant" && password === "Admin"){
+            statusMessage.innerText = "Admin Login!";
+            statusMessage.style.color = 'green';
+        }
+        if (username === "TestLogin" && password === "Admindatabase"){
+            statusMessage.innerText = "Login Success!";
+            statusMessage.style.color = 'green';
+        }
+        if (username === "TestAccount" && password === "Account"){
+            statusMessage.innerText = "Testingggggg !";
+            statusMessage.style.color = 'green';
+        }
         else if (username === "duyadmin" && password === "securepass") {
             statusMessage.innerText = "Login Successful!";
             statusMessage.style.color = "green";
