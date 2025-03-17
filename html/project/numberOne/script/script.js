@@ -8,6 +8,8 @@ function togglePassword() {
     passwordField.type = passwordField.type === "password" ? "text" : "password";
 }
 
+document.getElementById("showPassword").addEventListener("click", togglePassword());
+
 function checkStrength() {
     let password = document.getElementById("password").value;
     let strengthText = document.getElementById("password-strength");
