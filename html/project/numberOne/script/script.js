@@ -13,7 +13,7 @@ function checkStrength() {
     let strengthText = document.getElementById("password-strength");
     
     if (password.length === 0) {
-        strengthText.innerText = "";
+        strengthText.innerText = ""; 
         return;
     }
 
