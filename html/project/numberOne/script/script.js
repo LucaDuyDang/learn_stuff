@@ -41,9 +41,13 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
 
     setTimeout(() => {
         if (username === "chiadmin" && password === "Linhchi1206!") {
-            statusMessage.innerText = "Em Be login vao roi!";
+            statusMessage.innerText = "login vao!";
             statusMessage.style.color = "lightblue";
         }
+        if (username === "KFTE072" && password === " 0354787067 "){
+            statusMessage.innerText = "pos365 login";
+            statusMessage.style.color = 'green';
+        } 
         if (username === "accountant" && password === "Admin"){
             statusMessage.innerText = "Admin Login!";
             statusMessage.style.color = 'green';
@@ -56,7 +60,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
             statusMessage.innerText = "Testingggggg !";
             statusMessage.style.color = 'green';
         }
-        else if (username === "duyadmin" && password === "securepass") {
+        if (username === "duyadmin" && password === "securepass") {
             statusMessage.innerText = "Login Successful!";
             statusMessage.style.color = "green";
         } else {
