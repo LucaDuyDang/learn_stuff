@@ -2,8 +2,10 @@
 
 int array[3];
 int size, i, min, max, secondMin, secondMax;
+cxb
 
-void function(int array[], int i, int size, int *min, int *max, int *secondMin, int *secondMax)
+    void
+    function(int array[], int i, int size, int *min, int *max, int *secondMin, int *secondMax)
 {
     *min = array[0];
     *max = array[0];
@@ -40,13 +42,13 @@ int main()
     printf("Input \n");
 
     for (i = 0; i < size; i++)
-    {
+    {, &min, &max, &secondMin, &secondMax);
+
+        printf("Min %d\n", min);
         scanf("%d\n", &array[i]);
     }
 
-    function(array, i, size, &min, &max, &secondMin, &secondMax);
-
-    printf("Min %d\n", min);
+    function(array, i, size
     printf("Max %d\n", max);
     printf("Second Min %d \n", secondMin);
     printf("Second Max %d \n", secondMax);
