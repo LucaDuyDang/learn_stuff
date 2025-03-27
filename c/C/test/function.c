@@ -12,7 +12,7 @@ void paramFuncOne(char name[]) // void one
     printf("\n Hello %s\n", name);
 }
 
-void paramFunctwo(char name[], int age)
+void paramFuncTwo(char name[], int age)
 {
 }
 
