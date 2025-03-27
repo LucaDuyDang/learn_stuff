@@ -20,7 +20,7 @@ void paramFunctwo(char name[], int age)
 void paramCalculate(int x, int y) // void two
 {
     int sum = x + y;
-    -printf("\n The sum of x + y = %d \n", sum);
+    printf("\n The sum of x + y = %d \n", sum);
 }
 
 // with multiple parameter
