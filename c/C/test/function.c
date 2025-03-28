@@ -45,7 +45,7 @@ void calculateNumber() // void six
     int a = 10;
     int b = 20;
     int c = a + b;
-    printf("\nThe result of a + b = %d\n", c);
+    printf("\n The result of a + b = %d\n", c);
 }
 
 void callNumbers(int myNum[15]) // void seven
@@ -80,7 +80,7 @@ int main()
         1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
 
     // create char Array
-    char nameTag[20] = "Dev LucaDang";
+    char nameTag[20] = "Dev LucDang";
 
     // create array length
     int length = sizeof(myNumbers) / sizeof(myNumbers[0]);
@@ -160,5 +160,6 @@ int main()
     {
         printf(" \n ResultArray%d is : %d \n", b + 1, resultArr[b]);
     }
+
     return 0;
 }
