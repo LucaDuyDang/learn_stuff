@@ -19,7 +19,7 @@ public class ComplexJavaExample {
     }
 
     // Function to find the maximum value in an array
-    public static int findMaximum(int[] arr) {
+    public static int findMaximbrum(int[] arr) {
         int max = arr[0];
         for (int i = 1; i < arr.length; i++) {
             if (arr[i] > max) {
