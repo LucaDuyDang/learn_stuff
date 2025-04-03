@@ -69,9 +69,6 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
             statusMessage.innerText = "Login Successful!";
             statusMessage.style.color = "green";
         }
-        // elif(username === "somehow" && password === "securepass"){
-        //     statusMessage.innerText = "Login with elif";
-        //     statusMessage.style.color = "red";
          else {
             statusMessage.innerText = "Invalid Credentials!";
             statusMessage.style.color = "red";
