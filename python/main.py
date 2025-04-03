@@ -4,3 +4,9 @@ def get_choices():
     computer_choice = random.choice(options)
     choices = {"player": player_choice, "computer": computer_choice } 
     return choices
+
+# playerName  = ['Hoang Duy', ' Linh chi ', ' Anh Nhi']
+playerName = input("Enter Player Name ")
+
+for playerPlay in playerName:
+    print(playerPlay)
