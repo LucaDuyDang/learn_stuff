@@ -1,5 +1,8 @@
 {
     "files.associations": {
+        "*.sqlbook": "sql",
+        "*.ndjson": "jsonl",
+        "*.dbclient-js": "javascript",
         "stdio.h": "c",
         "__hash_table": "c",
         "__split_buffer": "c",
@@ -14,7 +17,9 @@
         "queue": "c",
         "span": "c",
         "random": "c",
-        "format": "c"
+        "format": "c",
+        "__locale": "c",
+        "__string": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }

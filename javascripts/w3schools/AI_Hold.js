@@ -26,7 +26,7 @@ The var keyword should only be used in code written for older browsers.
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 Data Type  :
-
+/
 String
 Number
 Bigint
@@ -35,3 +35,6 @@ Undefined
 Null
 Symbol
 Object 
+/
+
+function call () // the same with C

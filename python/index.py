@@ -1,7 +1,7 @@
-import random
+import random #import random function for options com
 
 def get_choices():
-    player_choice = input("Enter a choice (rock,paper,scissors: )") # print out for player 
+    player_choice = input("Enter a choice (rock,paper,scissors: )") # print out for player to choose
     options = ["rock","paper","scissors"] # make options for com
     computer_choice = random.choice(options) # create a function call "random" on options 
     choices = {"player": player_choice, "computer": computer_choice } # print out player choice and com choice 
