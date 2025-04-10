@@ -3,5 +3,6 @@
 
 int main()
 {
-    printf("wellcome to the program");
+    printf(" Hello");
+    return 0;
 }
