@@ -15,7 +15,7 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
 // 📌 Create Schema & Model
 const viewSchema = new mongoose.Schema({
     date: { type: String, required: true, unique: true },
-    count: { type: Number, default: 0 }
+    count: { type: Number, default: 0 }  
 });
 const View = mongoose.model("View", viewSchema);
 

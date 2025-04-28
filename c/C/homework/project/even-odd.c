@@ -9,8 +9,8 @@ struct scanBinary
     float secThree;
     float secFour;
     int agingNumber;
-    char oderName;
-    char authorName;
+    char oderName[50];
+    char authorName[50];
 };
 
 void checkBinary();
@@ -52,10 +52,7 @@ int main()
     // {
     //     printf("It's odd")
     // }
-    for (int i = 0; i < 5; i +=)
-    {
-        printf("One %d \n , Two %f \n ,Three %f \n, Four %f \n , Oder %s \n , Author %s \n.", input.secOne, input.secTwo, input.secThree, input.secFour, input.oderName, input.authorName);
-    }
+    printf("One %d ,\n Two %.1f ,\n Three %.1f ,\n Four %.1f ,\n Oder %s, \n Author %s. \n", input.secOne, input.secTwo, input.secThree, input.secFour, input.oderName, input.authorName);
 
     return 0;
 }
