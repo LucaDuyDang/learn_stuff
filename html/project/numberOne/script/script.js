@@ -2,17 +2,17 @@
 document.getElementById("theme-btn").addEventListener("click", function() {
     document.body.classList.toggle("light-mode");
     this.innerText = document.body.classList.contains("light-mode") ?  "🌙" :"☀️";
-});
+}); // toggle light and dark mode
 
 // off-on password
 function togglePassword() {
-    let passwordField = document.getElementById("password");
+    let passwordField = document.getElementById("password"); // no change conditions
     passwordField.type = passwordField.type === "password" ? "text" : "password";
 }
 
 // testing password
 function checkStrength() {
-    let password = document.getElementById("password").value;
+    let password = document.getElementById("password").value; // value password
     let strengthText = document.getElementById("password-strength");
     
     // conditions
