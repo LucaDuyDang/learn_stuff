@@ -1,22 +1,27 @@
+// theme-btn-listener 
 document.getElementById("theme-btn").addEventListener("click", function() {
     document.body.classList.toggle("light-mode");
     this.innerText = document.body.classList.contains("light-mode") ?  "🌙" :"☀️";
 });
 
+// off-on password
 function togglePassword() {
     let passwordField = document.getElementById("password");
     passwordField.type = passwordField.type === "password" ? "text" : "password";
 }
 
+// testing password
 function checkStrength() {
     let password = document.getElementById("password").value;
     let strengthText = document.getElementById("password-strength");
     
+    // conditions
     if (password.length === 0) {
         strengthText.innerText = ""; 
         return;
     }
 
+    // code react
     if (password.length < 6) {
         strengthText.innerText = "Weak Password";
         strengthText.style.color = "red";
@@ -29,6 +34,7 @@ function checkStrength() {
     }
 }
 
+// submit event
 document.getElementById("loginForm").addEventListener("submit", function(event) {
     event.preventDefault();
     
@@ -39,6 +45,8 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     statusMessage.innerText = "Logging in...";
     statusMessage.style.color = "green ";
 
+
+    // set timeout built-in 1500/per sec
     setTimeout(() => {
         if (username === "chiadmin" && password === "Linhchi1206!") {
             statusMessage.innerText = "login vao!";
@@ -69,6 +77,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
             statusMessage.innerText = "Login Successful!";
             statusMessage.style.color = "green";
         }
+        // condition when all fail
          else {
             statusMessage.innerText = "Invalid Credentials!";
             statusMessage.style.color = "red";
