@@ -10,12 +10,12 @@ function togglePassword() {
     passwordField.type = passwordField.type === "password" ? "text" : "password";
 }
 
-// testing password
+// Running Test Password
 function checkStrength() {
     let password = document.getElementById("password").value; // value password
     let strengthText = document.getElementById("password-strength");
     
-    // conditions
+    // (optional) check if password is empty
     if (password.length === 0) {
         strengthText.innerText = ""; 
         return;
@@ -46,10 +46,10 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     statusMessage.style.color = "green ";
 
 
-    // set timeout built-in 1500/per sec
+    // set timeout built-in 1500/per turn
     setTimeout(() => {
-        if (username === "chiadmin" && password === "Linhchi1206!") {
-            statusMessage.innerText = "login vao!";
+        if (username === "secAdmin" && password === "Linhchi1206!") {
+            statusMessage.innerText = "logging!";
             statusMessage.style.color = "lightblue";
         }
 
@@ -67,13 +67,13 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
             statusMessage.innerText = "Login Success!";
             statusMessage.style.color = 'green';
         }
-        
+            
         if (username === "TestAccount" && password === "Account"){
             statusMessage.innerText = "Testingggggg !";
             statusMessage.style.color = 'green';
         }
 
-        if (username === "duyadmin" && password === "securepass") {
+        if (username === "devAdmin" && password === "securepass") {
             statusMessage.innerText = "Login Successful!";
             statusMessage.style.color = "green";
         }
